@@ -1,0 +1,69 @@
+{
+  "_comment": "SSU Command — Camera Data Schema & Sample Template",
+  "_usage": "This file documents the camera object structure used by the dashboard. Use the Import feature in the app to load camera data from XLSX files.",
+
+  "schema": {
+    "id":          { "type": "string",  "required": true,  "description": "Unique camera identifier, e.g. CAM-001" },
+    "name":        { "type": "string",  "required": true,  "description": "Display name / label for the camera" },
+    "location":    { "type": "string",  "required": false, "description": "Physical location description" },
+    "zone":        { "type": "string",  "required": false, "description": "Zone or area grouping name" },
+    "lat":         { "type": "number",  "required": false, "description": "GPS latitude (decimal degrees)" },
+    "lng":         { "type": "number",  "required": false, "description": "GPS longitude (decimal degrees)" },
+    "ip":          { "type": "string",  "required": false, "description": "Camera IP address on the network" },
+    "status":      { "type": "string",  "required": false, "description": "online | offline | fault | maintenance" },
+    "type":        { "type": "string",  "required": false, "description": "dome | bullet | ptz | fisheye | fixed" },
+    "resolution":  { "type": "string",  "required": false, "description": "e.g. 4MP, 8MP, 1080p" },
+    "installed":   { "type": "string",  "required": false, "description": "Installation date ISO 8601, e.g. 2024-01-15" },
+    "notes":       { "type": "string",  "required": false, "description": "Free-text notes" }
+  },
+
+  "sample_cameras": [
+    {
+      "id": "CAM-001",
+      "name": "Main Entrance",
+      "location": "Front Gate",
+      "zone": "Perimeter",
+      "lat": -33.9249,
+      "lng": 18.4241,
+      "ip": "192.168.1.101",
+      "status": "online",
+      "type": "dome",
+      "resolution": "4MP",
+      "installed": "2024-03-01",
+      "notes": "High-traffic entrance camera"
+    },
+    {
+      "id": "CAM-002",
+      "name": "Parking Bay A",
+      "location": "South Parking",
+      "zone": "Parking",
+      "lat": -33.9255,
+      "lng": 18.4238,
+      "ip": "192.168.1.102",
+      "status": "online",
+      "type": "bullet",
+      "resolution": "8MP",
+      "installed": "2024-03-01",
+      "notes": ""
+    },
+    {
+      "id": "CAM-003",
+      "name": "Server Room",
+      "location": "IT Block",
+      "zone": "Internal",
+      "lat": -33.9245,
+      "lng": 18.4244,
+      "ip": "192.168.1.103",
+      "status": "fault",
+      "type": "fixed",
+      "resolution": "2MP",
+      "installed": "2023-11-10",
+      "notes": "IR illuminator faulty — logged for repair"
+    }
+  ],
+
+  "xlsx_import_column_map": {
+    "_comment": "When importing from XLSX, ensure your column headers match these (case-insensitive).",
+    "columns": ["ID", "Name", "Location", "Zone", "Latitude", "Longitude", "IP Address", "Status", "Type", "Resolution", "Installed", "Notes"]
+  }
+}

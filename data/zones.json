@@ -1,0 +1,42 @@
+{
+  "_comment": "SSU Command — Zone Definitions. Zones are used to group cameras on the dashboard and map.",
+  "_usage": "Edit this file to pre-define your site zones, or manage them directly in the app via the Zones panel.",
+
+  "zones": [
+    {
+      "id": "zone-perimeter",
+      "name": "Perimeter",
+      "color": "#00d4ff",
+      "description": "Outer boundary cameras covering fences, gates and walls",
+      "priority": "high"
+    },
+    {
+      "id": "zone-parking",
+      "name": "Parking",
+      "color": "#ffab00",
+      "description": "All parking bays and vehicle access routes",
+      "priority": "medium"
+    },
+    {
+      "id": "zone-internal",
+      "name": "Internal",
+      "color": "#00e676",
+      "description": "Internal corridors, offices and common areas",
+      "priority": "medium"
+    },
+    {
+      "id": "zone-critical",
+      "name": "Critical",
+      "color": "#ff4444",
+      "description": "High-security areas: server rooms, vaults, control rooms",
+      "priority": "critical"
+    },
+    {
+      "id": "zone-reception",
+      "name": "Reception",
+      "color": "#b388ff",
+      "description": "Reception, lobbies and visitor areas",
+      "priority": "low"
+    }
+  ]
+}

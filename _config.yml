@@ -1,0 +1,6 @@
+# SSU Command — GitHub Pages Config
+# This file tells GitHub Pages to skip Jekyll processing
+# so the plain HTML/JS app deploys correctly.
+
+# No Jekyll processing needed — raw HTML site
+plugins: []

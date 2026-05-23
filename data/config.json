@@ -1,0 +1,56 @@
+{
+  "_comment": "SSU Command — App Configuration. Edit these values to customise your deployment.",
+
+  "app": {
+    "name": "SSU Command",
+    "subtitle": "Secure Access v1.0",
+    "version": "9.0.0",
+    "author": "Bradley Louw",
+    "theme_color": "#00d4ff",
+    "background_color": "#080c10"
+  },
+
+  "auth": {
+    "_comment": "Passwords are managed inside the app via the Admin panel. These are defaults only.",
+    "max_attempts": 5,
+    "lockout_duration_minutes": 5,
+    "session_timeout_minutes": 480
+  },
+
+  "map": {
+    "default_lat": -33.9249,
+    "default_lng": 18.4241,
+    "default_zoom": 12,
+    "_comment": "Default map center is Cape Town, ZA. Change to your site coordinates."
+  },
+
+  "pwa": {
+    "cache_name": "ssu-command-v1",
+    "offline_enabled": true
+  },
+
+  "data": {
+    "save_format": ".ssu",
+    "auto_save_default": false,
+    "backup_filename_prefix": "SSU_Backup_"
+  },
+
+  "ui": {
+    "sidebar_width_px": 280,
+    "ribbon_height_px": 38,
+    "toast_duration_ms": 3500
+  },
+
+  "fonts": {
+    "mono": "JetBrains Mono",
+    "display": "Syne",
+    "condensed": "Barlow Condensed",
+    "ui": "DM Sans"
+  },
+
+  "external_libs": {
+    "leaflet": "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
+    "leaflet_css": "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
+    "xlsx": "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+  }
+}
